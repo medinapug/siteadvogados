@@ -13,9 +13,11 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #2c3e50;
+    background-color: #000000;
     color: white;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que o padding e a borda não afetem a largura total */
 }
 
 header h1 {
@@ -30,6 +32,12 @@ header p {
 section {
     padding: 30px;
 }
+
+img {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
 
 .about, .services, .contact {
     background-color: white;
@@ -78,4 +86,35 @@ footer {
     color: white;
     padding: 10px;
     margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que o padding e a borda não afetem a largura total */
+}
+
+.left, .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Faz com que os elementos fiquem empilhados */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente */
+}
+
+.image {
+    max-width: 100%; /* Limita o tamanho da imagem a 80% da largura do bloco */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.logo_image {
+    max-width: 30%; /* Limita o tamanho da imagem a 80% da largura do bloco */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 40px;
+}
+
+.texto_descricao {
+    max-width: 60%;
 }
