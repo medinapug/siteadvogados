@@ -118,3 +118,23 @@ footer {
 .texto_descricao {
     max-width: 60%;
 }
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Faz com que os itens fiquem empilhados em telas pequenas */
+    }
+
+    .left, .right {
+        flex: none; /* Remove o comportamento de flex para os itens dentro do container */
+        width: 100%; /* Garante que ambos ocupem 100% da largura disponível */
+    }
+
+    .logo_image {
+        max-width: 50%; /* Ajusta o tamanho da imagem no celular */
+    }
+
+    .texto_descricao {
+        max-width: 90%; /* Ajusta a largura da descrição no celular */
+    }
+}
