@@ -94,10 +94,12 @@ footer {
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Garante que o padding e a borda não afetem a largura total */
+    flex-direction: column;
 }
 
 .left, .right {
     flex: 1;
+    position: relative; 
     display: flex;
     flex-direction: column; /* Faz com que os elementos fiquem empilhados */
     justify-content: center; /* Centraliza a imagem horizontalmente */
@@ -105,18 +107,36 @@ footer {
 }
 
 .image {
-    max-width: 100%; /* Limita o tamanho da imagem a 80% da largura do bloco */
+    width: 100%; /* Limita o tamanho da imagem a 80% da largura do bloco */
     height: auto; /* Mantém a proporção da imagem */
 }
 
 .logo_image {
-    max-width: 30%; /* Limita o tamanho da imagem a 80% da largura do bloco */
+    max-width: 12%; /* Limita o tamanho da imagem a 80% da largura do bloco */
     height: auto; /* Mantém a proporção da imagem */
-    margin: 40px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .texto_descricao {
     max-width: 60%;
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.texto-sobreposto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-family: Georgia, serif;
+  /* background: rgba(0, 0, 0, 0.5); fundo semi-transparente para legibilidade */
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
 }
 
 /* Media query para telas menores */
